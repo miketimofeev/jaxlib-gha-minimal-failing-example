@@ -1,2 +1,2 @@
-jax
-jaxlib>=01.68
+jax~=0.2.16
+jaxlib>=0.1.68

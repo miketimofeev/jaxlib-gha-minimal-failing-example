@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test:
+
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python-version: [3.7, 3.8, 3.9]
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install dependencies
+      run: |
+        python -m pip --no-cache-dir install --upgrade pip setuptools wheel
+        python -m pip --no-cache-dir install -r requirements.txt
+
+    - name: List installed Python packages
+      run: |
+        python -m pip list
+
+    - name: printenv for debugging
+      run: |
+        printenv
+
+    - name: JAX debug
+      run: |
+        python debug_32b.py
+        python debug_64b.py

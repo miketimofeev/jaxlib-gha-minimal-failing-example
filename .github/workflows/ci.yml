@@ -37,5 +37,7 @@ jobs:
 
     - name: JAX debug
       run: |
-        python debug_32b.py
-        python debug_64b.py
+        printf '\n\n# python -v debug_32b.py\n\n\n'
+        python -v debug_32b.py
+        printf '\n\n# python -v debug_64b.py\n\n\n'
+        python -v debug_64b.py

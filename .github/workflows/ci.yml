@@ -27,7 +27,35 @@ jobs:
 
     - name: JAX debug
       run: |
-        printf '\n\n# python3 -v debug_32b.py\n\n\n'
-        python3 -v debug_32b.py
-        printf '\n\n# python3 -v debug_64b.py\n\n\n'
-        python3 -v debug_64b.py
+        printf '\n\n# python -v debug_32b.py\n\n\n'
+        python -v debug_32b.py
+        printf '\n\n# python -v debug_64b.py\n\n\n'
+        python -v debug_64b.py
+        printf '\n\n# python -v debug_32b.py\n\n\n'
+        python -v debug_32b.py
+        printf '\n\n# python -v debug_64b.py\n\n\n'
+        python -v debug_64b.py
+        printf '\n\n# python -v debug_32b.py\n\n\n'
+        python -v debug_32b.py
+        printf '\n\n# python -v debug_64b.py\n\n\n'
+        python -v debug_64b.py
+        printf '\n\n# python -v debug_32b.py\n\n\n'
+        python -v debug_32b.py
+        printf '\n\n# python -v debug_64b.py\n\n\n'
+        python -v debug_64b.py
+        printf '\n\n# python -v debug_32b.py\n\n\n'
+        python -v debug_32b.py
+        printf '\n\n# python -v debug_64b.py\n\n\n'
+        python -v debug_64b.py
+        printf '\n\n# python -v debug_32b.py\n\n\n'
+        python -v debug_32b.py
+        printf '\n\n# python -v debug_64b.py\n\n\n'
+        python -v debug_64b.py
+        printf '\n\n# python -v debug_32b.py\n\n\n'
+        python -v debug_32b.py
+        printf '\n\n# python -v debug_64b.py\n\n\n'
+        python -v debug_64b.py
+        printf '\n\n# python -v debug_32b.py\n\n\n'
+        python -v debug_32b.py
+        printf '\n\n# python -v debug_64b.py\n\n\n'
+        python -v debug_64b.py

@@ -7,29 +7,19 @@ on:
 jobs:
   test:
 
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest, macos-latest]
-        python-version: [3.7, 3.8, 3.9.6]
+    runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v2
 
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
-      with:
-        python-version: ${{ matrix.python-version }}
-
     - name: Install dependencies
       run: |
-        python -m pip --no-cache-dir install --upgrade pip setuptools wheel
-        python -m pip --no-cache-dir install -r requirements.txt
+        python3 -m pip --no-cache-dir install --upgrade pip setuptools wheel
+        python3 -m pip --no-cache-dir install -r requirements.txt
 
     - name: List installed Python packages
       run: |
-        python -m pip list
+        python3 -m pip list
 
     - name: printenv for debugging
       run: |
@@ -37,7 +27,7 @@ jobs:
 
     - name: JAX debug
       run: |
-        printf '\n\n# python -v debug_32b.py\n\n\n'
-        python -v debug_32b.py
-        printf '\n\n# python -v debug_64b.py\n\n\n'
-        python -v debug_64b.py
+        printf '\n\n# python3 -v debug_32b.py\n\n\n'
+        python3 -v debug_32b.py
+        printf '\n\n# python3 -v debug_64b.py\n\n\n'
+        python3 -v debug_64b.py
